@@ -5,7 +5,7 @@ import java.util.Set;
 public class Feuille<T extends Sommable<T> & Comparable<T>> implements Arbre<T> {
     private final T valeur;
 
-    public Feuille(T valeur) {
+    public Feuille(int valeur) {
         this.valeur = valeur;
     }
 
@@ -44,4 +44,8 @@ public class Feuille<T extends Sommable<T> & Comparable<T>> implements Arbre<T> 
         return false;
     }
 
+    @Override
+    public T sommer(T e1) {
+        return null;
+    }
 }

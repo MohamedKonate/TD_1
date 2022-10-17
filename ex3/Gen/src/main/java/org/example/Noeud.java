@@ -100,4 +100,9 @@ public class Noeud<T extends Sommable<T> & Comparable<T>> implements Arbre<T> {
         }
         return rtr;
     }
+
+    @Override
+    public T sommer(T e1) {
+        return null;
+    }
 }

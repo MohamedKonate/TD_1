@@ -1,6 +1,6 @@
 package org.example;
 
-public class Chaine implements Sommable<Chaine>, Comparable<Chaine> {
+public class Chaine implements Sommable<Chaine> {
     private String valeur;
 
     public Chaine(String _valeur) {
@@ -22,9 +22,5 @@ public class Chaine implements Sommable<Chaine>, Comparable<Chaine> {
                 "valeur='" + valeur + '\'' +
                 ']';
     }
-
-    @Override
-    public int compareTo(Chaine autre) {
-        return this.valeur.compareTo(autre.getValeur());
-    }
 }
+

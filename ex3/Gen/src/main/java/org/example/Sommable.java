@@ -2,5 +2,5 @@ package org.example;
 
 public interface Sommable<T> {
 
-    T sommer(T e1);
+    T sommer(T a1);
 }

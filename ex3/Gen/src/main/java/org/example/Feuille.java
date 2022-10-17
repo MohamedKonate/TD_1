@@ -2,10 +2,11 @@ package org.example;
 
 import java.util.Set;
 
-public class Feuille<T extends Sommable<T> & Comparable<T>> implements Arbre<T> {
+public class Feuille<T> implements Arbre<T> {
     private final T valeur;
+    private T value;
 
-    public Feuille(int valeur) {
+    public Feuille(T valeur) {
         this.valeur = valeur;
     }
 
@@ -16,7 +17,8 @@ public class Feuille<T extends Sommable<T> & Comparable<T>> implements Arbre<T> 
 
     @Override
     public boolean contient(final T val) {
-        return val.equals(this.valeur);
+        this.value = value;
+        return value.equals(this.valeur);
     }
 
     @Override
@@ -30,22 +32,12 @@ public class Feuille<T extends Sommable<T> & Comparable<T>> implements Arbre<T> 
     }
 
     @Override
-    public T min() {
-        return valeur;
-    }
-
-    @Override
-    public T max() {
-        return valeur;
-    }
-
-    @Override
     public boolean estTrie() {
         return false;
     }
 
     @Override
-    public T sommer(T e1) {
+    public T sommer(T a1) {
         return null;
     }
 }
